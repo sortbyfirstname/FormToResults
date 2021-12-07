@@ -1,0 +1,79 @@
+﻿<Page x:Class="FormToResults.Form"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FormToResultsApp"
+        mc:Ignorable="d"
+        Title="FormToResults | Form" 
+        Height="550" Width="480"
+        Background="Transparent">
+
+    <Grid>
+        <Image Source="images/Close.png" MouseDown="Close" Width="12" Height="12" Opacity="0.3" Margin="443,-15,-10,513" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <StackPanel HorizontalAlignment="Center" Margin="50">
+                <Image Source="images/Banner.png" Width="230" RenderOptions.BitmapScalingMode="HighQuality"/>
+                <TextBlock Text="FORM ✔ RESULTS" 
+                           FontFamily="Helvetica"
+                           FontWeight="Light"
+                           FontSize="30"
+                           Foreground="White"
+                           HorizontalAlignment="Center"
+                           Margin="15"/>
+            </StackPanel>
+
+
+            <StackPanel Grid.Row="1">
+                <StackPanel>
+                    <TextBox Text="Username"
+                             x:Name="username"
+                             FontFamily="Helvetica"
+                             FontWeight="Light"
+                             FontSize="24"
+                             HorizontalAlignment="Center"
+                             Foreground="White"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Width="235"
+                             HorizontalContentAlignment="Left"
+                             Opacity="0.5"
+                             GotFocus="TextBox_GotFocus"
+                             KeyDown="TextBox_KeyDown"/>
+                    <Border Width="230"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+                </StackPanel>
+
+                <StackPanel Margin="30">
+                    <PasswordBox Password="Password" 
+                                 x:Name="password"
+                                 FontFamily="Helvetica"
+                                 FontWeight="Light"
+                                 FontSize="24"
+                                 HorizontalAlignment="Center"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 BorderThickness="0"
+                                 Width="235"
+                                 HorizontalContentAlignment="Left"
+                                 Opacity="0.5"
+                                 GotFocus="PasswordBox_GotFocus"/>
+                    <Border Width="230"
+                            Height="2"
+                            Background="White"
+                            Opacity="0.5"/>
+                </StackPanel>
+
+                <Button Click="Run" Margin="20" Content="RUN" Width="100" Height="40" IsDefault="True" Cursor="Hand"/>
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Page>
